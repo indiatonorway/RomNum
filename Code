@@ -1,0 +1,80 @@
+def int_to_roman(val):
+    roman = ''
+    # For values greater than or equal to 1000
+   
+    while val >= 1000:
+        roman = roman + 'M'
+        val = val - 1000
+       
+    # For values greater than or equal to 500 & less than 900
+   
+    while val >= 500 and val < 900:
+        roman = roman + 'D'
+        val = val - 500
+       
+    # For values equal to 900
+   
+    if val >= 900 and val < 1000:
+        roman = roman + 'CM'
+        val = val - 900
+
+    # For values greater than or equal to 100 & less than 400
+   
+    while val >= 100 and val < 400:
+        roman = roman + 'C'
+        val = val - 100
+       
+    # For values equal to 400
+   
+    if val >= 400 and val < 500:
+        roman = roman + 'CD'
+        val = val - 400
+       
+    # For values greater than or equal to 50 & less than 90
+   
+    while val >= 50 and val < 90:
+        roman = roman + 'L'
+        val = val - 50
+       
+    # For values equal to 90
+   
+    if val >= 90 and val < 100:
+        roman = roman + 'XC'
+        val = val - 90  
+   
+    # For values greater than or equal to 10 & less than 40
+   
+    while val >= 10 and val < 40:
+        roman = roman + 'X'
+        val = val - 10
+       
+    # For values equal to 40
+   
+    if val >= 40 and val < 50:
+        roman = roman + 'XL'
+        val = val - 40      
+       
+    # For values greater than or equal to 5 & less than 9
+   
+    while val >= 5 and val < 9:
+        roman = roman + 'V'
+        val = val - 5
+   
+    # For values equal to 9
+   
+    if val == 9:
+        roman = roman + "IX"
+        val = val - 9
+       
+    # For values greater than or equal to 1 & less than 4
+   
+    while val >= 1 and val < 4:
+        roman = roman + 'I'
+        val = val - 1
+   
+    # For values equal to 4
+   
+    if val == 4:
+        roman = roman + 'IV'
+        val = val - 4
+    return roman
